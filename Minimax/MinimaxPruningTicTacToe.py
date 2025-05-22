@@ -30,19 +30,27 @@ class TicTacToe:
         #  O |   | X
         # Hint: Access self.board positions 1 to 9
         pass  # TODO: Print the board nicely
+        print(self.board[1]) + "|" + self.board[2] + "|" + self.board[3] + "|"
+        print(self.board[4]) + "|" + self.board[5] + "|" + self.board[6] + "|"
+        print(self.board[7]) + "|" + self.board[8] + "|" + self.board[9] + "|"
+      
 
     def is_cell_free(self, position):
         # Check if the cell at 'position' (1 to 9) is empty (' ')
-        # Return True if empty, False if already occupied
-        pass  # TODO: Check if board[position] is ' '
+        # Return True if empty, False 
+        if self.board == " ":
+            return True
+        return False
 
     def update_player_position(self, player, position):
         # Place player's mark ('X' or 'O') on the board at 'position'
         # First check if the cell is free using is_cell_free()
-        # If cell is occupied, print a warning and ask the player for a new move again
-        # After updating, call check_game_state() to verify if game ended
-        pass  # TODO: Implement update and recursive retry for invalid move
-
+        if self.is_cell_free(position)
+            self.board[position] = player
+        else:
+            print"error: cannot insert here"
+            self.move_player()
+            
     def check_game_state(self):
         # Print the current board (call print_board())
         # Check if the game is a draw (no free cells and no winner)
@@ -50,6 +58,7 @@ class TicTacToe:
         # Check if the player or computer has won by calling is_winning()
         # If someone won, print who won and end the program
         pass  # TODO: Implement checks and use exit() when game ends
+        
 
     def is_winning(self, player):
         # Check if 'player' ('X' or 'O') has any winning combination:
@@ -59,6 +68,23 @@ class TicTacToe:
         # Return True if winning condition met, else False
         # Hint: Use loops to check rows and columns, and manual checks for diagonals
         pass  # TODO: Implement win condition logic
+        if self.board[1] == player and self.board[5] ==player and self.board[9] == player :
+            return True
+        if self.board[3] == player and self.board[5] ==player and self.board[7] == player :
+            return True
+           for i in range (1,4):
+               if self.board[i] == "0":
+                   temp_c +=1
+               elif self.board[1] == "X"
+                   temp_x +=1
+            if temp_c or temp_x == 3:
+                return True
+                 
+        n=1  1,2,3
+        n=2  4,5,6
+        n=3  7,8,9
+        
+            
 
     def is_draw(self):
         # Check if all cells are occupied (no spaces ' ') and no winner

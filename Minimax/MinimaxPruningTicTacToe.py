@@ -9,10 +9,8 @@ class TicTacToe:
         self.computer = 'X'
 
     def run(self):
-        print("Welcome to Tic-Tac-Toe!")
-        print("You are O, computer is X. Computer goes first.")
-        print("Positions are numbered 1-9 from top-left to bottom-right.")
-        
+        print("Tic-Tac-Toe!")
+     
         while True:
            
             self.move_computer()

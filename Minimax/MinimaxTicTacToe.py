@@ -8,7 +8,7 @@ class TicTacToe:
         self.computer = 'X'
 
     def run(self):
-        print("Welcome to Tic-Tac-Toe 2")
+        print("Tic-Tac-Toe 2")
         
         while True:
             self.move_computer()
